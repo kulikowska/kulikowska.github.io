@@ -405,6 +405,11 @@ header .hero-text button:hover {
 .about section.skills {
   padding-top: 80px;
 }
+@media screen and (max-width: 630px) {
+  .about section.skills {
+    padding-top: 110px;
+  }
+}
 .about section.skills h3 {
   margin-bottom: 30px;
   letter-spacing: 0.5px;
