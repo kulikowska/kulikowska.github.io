@@ -1,0 +1,12 @@
+<span class="email-btn">
+    <i class="far fa-envelope"></i>
+
+    <div class="copy-email-wrap" ng-class="pinned|checkActive">
+        <span class="email">
+            rubykulikowska@gmail.com
+            <span class="msg" ng-class="copied|checkActive">Copied!</span>
+        </span>
+        <i class="fa fa-copy" ng-click="copyToClip()"></i>
+        <i class="fa fa-thumbtack" ng-click="pinEmail()"></i>
+    </div>
+</span>
