@@ -126,20 +126,20 @@ APP
             $scope.copyToClip = function() {
                 if (mobileCheck()) {
                     if ($scope.activeMsg === 'mobile') {
-                        //navigator.clipboard.writeText('rubykulikowska@gmail.com');
+                        navigator.clipboard.writeText('rubykulikowska@gmail.com');
                         $scope.activeMsg = 'copied';
                     } else {
                         $scope.activeMsg = 'mobile';
                     }
                 } else {
-                    //navigator.clipboard.writeText('rubykulikowska@gmail.com');
+                    navigator.clipboard.writeText('rubykulikowska@gmail.com');
                     $scope.activeMsg = 'copied';
                 }
             }
 
             $scope.resetMsg = function() {
                 setTimeout(() => {
-                    $scope.activeMsg = mobileCheck() ? 'mobile' : 'click';
+                    $scope.activeMsg = 'click';
                     $scope.$apply();
                 }, 300);
             }
