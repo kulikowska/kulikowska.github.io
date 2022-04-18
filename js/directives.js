@@ -117,21 +117,13 @@ APP
 
             $scope.msg = { 
                 click  : { text : 'Click to Copy', klass: '' },
-                copied : { text : 'Copied!',       klass: 'clicked' },
-                mobile : { text : 'Tap again to copy', klass : '' }
+                copied : { text : 'Copied!',       klass: 'clicked' }
             };
 
             $scope.activeMsg = 'click';
 
             $scope.copyToClip = function() {
-                if (mobileCheck()) {
-                    if ($scope.activeMsg === 'mobile') {
-                        navigator.clipboard.writeText('rubykulikowska@gmail.com');
-                        $scope.activeMsg = 'copied';
-                    } else {
-                        $scope.activeMsg = 'mobile';
-                    }
-                } else {
+                if (!mobileCheck()) {
                     navigator.clipboard.writeText('rubykulikowska@gmail.com');
                     $scope.activeMsg = 'copied';
                 }
